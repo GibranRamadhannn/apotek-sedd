@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.icon-hover path {
+    transition: stroke 0.3s ease;
+}
+
+button:hover .icon-hover path {
+    stroke: #0aa1fa;
+}
