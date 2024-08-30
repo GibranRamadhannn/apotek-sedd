@@ -2,10 +2,10 @@
 
 @php
 $classes = ($active ?? false)
-? 'inline-flex items-center justify-center p-3 w-24 bg-black rounded-xl text-xs font-normal text-white transition
-duration-150 ease-in-out'
-: 'inline-flex items-center justify-center p-3 w-24 bg-white rounded-xl text-xs font-normal text-dark-gray
-hover:text-black transition duration-150 ease-in-out';
+? 'inline-flex items-center justify-center p-2 bg-raisin-black text-white rounded-full transition
+duration-200 ease-in-out group'
+: 'inline-flex items-center justify-center p-2 bg-white text-raisin-black rounded-full transition
+duration-200 ease-in-out group';
 @endphp
 
 <a {{ $attributes->merge(['class' => $classes]) }}>

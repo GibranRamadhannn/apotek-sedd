@@ -15,7 +15,7 @@ export default {
                 // Index - Gibran
                 button: "#098ddb",
                 button2: "#0aa1fa",
-                bg: "#F2F4F7",
+                bg: "#F0F6F6",
 
                 // Index - Hex Names Groups
                 // Exclusive Group
@@ -26,22 +26,34 @@ export default {
                 "very-dark-gray": "#4a4a4a",
                 "grayish-cyan": "#9c9d9d",
                 "grayish-blue": "#d5d7d9",
+                "grayish-magenta": "#767476",
                 "light-grayish-blue": "#e4e5e8",
                 "light-gray": "#F8F9F9",
+                "very-light-gray": "#efefef",
                 // Red Group
                 "bright-red": "#FA3E3E",
                 "soft-red": "#fa5151",
                 // Green Group
                 "lime-green": "#76d51f",
+                // Black Group
+                "raisin-black": "#242124",
             },
             fontFamily: {
-                sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
+                montserrat: ["Montserrat"],
                 poppins: ["Poppins"],
             },
             borderRadius: {
                 "4xl": "32px",
                 "5xl": "40px",
                 "6xl": "48px",
+            },
+            spacing: {
+                17: "68px",
+                26: "100px",
+                27: "110px",
+                29: "120px",
+                61: "245px",
+                62: "250px",
             },
         },
     },

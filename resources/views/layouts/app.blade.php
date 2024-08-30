@@ -23,37 +23,22 @@
     <script defer src="{{ asset('js/add-to-cart-pos.js') }}"></script>
     <script defer src="{{ asset('js/tabs-stock.js') }}"></script>
     <script defer src="{{ asset('js/avoid-close-modal-alert-form.js') }}"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
 </head>
 
-<body class="font-sans antialiased">
+<body class="font-montserrat antialiased">
     <div class="min-h-screen bg-bg">
         @include('layouts.navigation')
 
-        <!-- Page Heading -->
-        @isset($header)
-        <header class="flex justify-start items-center">
-            {{-- Header label --}}
-            <div class="max-w-7xl p-6 sm:px-5 lg:px-7">
-                {{ $header }}
-            </div>
-            <div class="h-6 border-r-2 border-dark-gray"></div>
-            {{-- Breadcrumbs --}}
-            <div class="p-4 leading-tight">
-                @isset($breadcrumbs)
-                @include('layouts.breadcrumb')
-                @endisset
-            </div>
-        </header>
-        @endisset
-
-        <!-- Page Content -->
-        <main>
-            {{ $slot }}
-        </main>
+        <div class="inline-flex gap-2">
+            @include('layouts.sidebar')
+            @include('layouts.main-content')
+        </div>
 
         {{-- Footer --}}
         @include('layouts.footer')
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 </body>
 
 </html>

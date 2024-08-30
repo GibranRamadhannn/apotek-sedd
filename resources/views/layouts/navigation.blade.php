@@ -1,165 +1,83 @@
-<nav x-data="{ open: false }">
-    <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between h-16">
-            <div class="flex items-center gap-1">
-                <!-- Logo -->
-                <div class="shrink-0 flex items-center">
-                    <a href="/">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
-                    </a>
-                </div>
+<nav class="fixed top-0 z-50 w-full bg-bg">
+    <div class="px-3 py-2 lg:px-5 lg:pl-3">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center justify-center gap-8">
 
-                <!-- Navigation Links -->
-                {{-- Dashboard --}}
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-dropdown width="48">
-                        <x-slot name="trigger">
-                            {{-- Nav Link --}}
-                            <button>
-                                <x-nav-link :active="request()->routeIs('dashboard.*')">
-                                    {{ __('Dashboard') }}
-                                </x-nav-link>
-                            </button>
-                        </x-slot>
-                        {{-- Content of Dropdown --}}
-                        <x-slot name="content">
-                            <x-dropdown-link href="{{ route('dashboard.pelanggan.index') }}">
-                                {{ __('Pelanggan') }}
-                            </x-dropdown-link>
-                            <x-dropdown-link href="{{ route('dashboard.produk.index') }}">
-                                {{ __('Produk') }}
-                            </x-dropdown-link>
-                            <x-dropdown-link href="{{ route('dashboard.pembelian.index') }}">
-                                {{ __('Pembelian') }}
-                            </x-dropdown-link>
-                        </x-slot>
-                    </x-dropdown>
-                </div>
-
-                {{-- POS --}}
-                <button>
-                    <x-nav-link href="{{ route('pos.index') }}" :active="request()->routeIs('pos.index')">
-                        {{ __('POS') }}
-                    </x-nav-link>
-                </button>
-
-                {{-- List Order --}}
-                <button>
-                    <x-nav-link href="{{ route('listorder.index') }}" :active="request()->routeIs('listorder.index')">
-                        {{ __('List Order') }}
-                    </x-nav-link>
-                </button>
-
-                {{-- Stock --}}
-                <button>
-                    <x-nav-link href="{{ route('stock.index') }}" :active="request()->routeIs('stock.index')">
-                        {{ __('Stock') }}
-                    </x-nav-link>
-                </button>
-
-                {{-- Master --}}
-                <div class="hidden sm:flex">
-                    <x-dropdown width="48">
-                        <x-slot name="trigger">
-                            <button>
-                                {{-- Nav Link --}}
-                                <x-nav-link :active="request()->routeIs('master.*')">
-                                    {{ __('Master') }}
-                                </x-nav-link>
-                            </button>
-                        </x-slot>
-                        {{-- Content of Dropdown --}}
-                        <x-slot name="content">
-                            <x-dropdown-link>
-                                {{ __('User') }}
-                            </x-dropdown-link>
-                            <x-dropdown-link href="{{ route('master.tipe') }}">
-                                {{ __('Tipe Produk') }}
-                            </x-dropdown-link>
-                            <x-dropdown-link>
-                                {{ __('Produk') }}
-                            </x-dropdown-link>
-                            <x-dropdown-link>
-                                {{ __('Pembelian') }}
-                            </x-dropdown-link>
-                        </x-slot>
-                    </x-dropdown>
-                </div>
-            </div>
-
-            <!-- Settings Dropdown -->
-            <div class="hidden sm:flex sm:items-center sm:ms-6">
-                <x-dropdown align="right" width="48">
-                    <x-slot name="trigger">
-                        <button class="inline-flex items-center transition ease-in-out duration-150">
-                            <img src="{{ asset('assets/img/dummyprofile.jpg') }}" alt="" class="rounded-xl size-12">
-                        </button>
-                    </x-slot>
-
-                    <x-slot name="content">
-                        <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
-                        </x-dropdown-link>
-
-                        <!-- Authentication -->
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-
-                            <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
-                                                this.closest('form').submit();">
-                                {{ __('Log Out') }}
-                            </x-dropdown-link>
-                        </form>
-                    </x-slot>
-                </x-dropdown>
-            </div>
-
-            <!-- Hamburger -->
-            <div class="-me-2 flex items-center sm:hidden">
-                <button @click="open = ! open"
-                    class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
-                    <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                        <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex"
-                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16" />
-                        <path :class="{'hidden': ! open, 'inline-flex': open }" class="hidden" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                {{-- Responsive - Membuka Sidebar Ges --}}
+                <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar"
+                    type="button"
+                    class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                    <span class="sr-only">Open sidebar</span>
+                    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd" fill-rule="evenodd"
+                            d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+                        </path>
                     </svg>
                 </button>
+                {{-- Responsive - Membuka Sidebar Ges --}}
+
+                {{-- Logo Aplikasi Bro --}}
+                <div class="p-4 bg-white rounded-full">
+                    <a href="/">
+                        <x-application-logo class="block h-10 w-auto fill-current text-gray-800" />
+                    </a>
+                </div>
+                {{-- Logo Aplikasi Bro --}}
+
+                {{-- Breadcrumbs cuy --}}
+                <div class="flex justify-center items-center gap-3">
+                    {{-- Header label --}}
+                    <div class="w-full">
+                        {{ $header }}
+                    </div>
+                    <div class="h-6 border-r-2 border-dark-gray"></div>
+                    {{-- Breadcrumbs --}}
+                    <div class="leading-tight">
+                        @isset($breadcrumbs)
+                        @include('layouts.breadcrumb')
+                        @endisset
+                    </div>
+                </div>
+                {{-- Breadcrumbs cuy --}}
             </div>
-        </div>
-    </div>
 
-    <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
-        <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard.index')" :active="request()->routeIs('dashboard.index')">
-                {{ __('Dashboard') }}
-            </x-responsive-nav-link>
-        </div>
+            {{-- Dropdown dari foto profile teman-teman --}}
+            <div class="flex items-center">
+                <div class="flex items-center ms-3">
+                    <div>
+                        <x-dropdown align="right" width="48">
+                            {{-- Nah ini button pembuka dropdownnya --}}
+                            <x-slot name="trigger">
+                                <button class="inline-flex items-center transition ease-in-out duration-150">
+                                    <img src="{{ asset('assets/img/dummyprofile.jpg') }}" alt=""
+                                        class="rounded-xl size-12">
+                                </button>
+                            </x-slot>
+                            {{-- Nah ini button pembuka dropdownnya --}}
 
-        <!-- Responsive Settings Options -->
-        <div class="pt-4 pb-1 border-t border-gray-200">
-            <div class="px-4">
-                <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
+                            {{-- Content Dropdown disini ya --}}
+                            <x-slot name="content">
+                                <x-dropdown-link :href="route('profile.edit')">
+                                    {{ __('Profile') }}
+                                </x-dropdown-link>
+
+                                <!-- Authentication -->
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+
+                                    <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
+                                            this.closest('form').submit();">
+                                        {{ __('Log Out') }}
+                                    </x-dropdown-link>
+                                </form>
+                            </x-slot>
+                            {{-- Content Dropdown disini ya --}}
+                        </x-dropdown>
+                    </div>
+                </div>
             </div>
-
-            <div class="mt-3 space-y-1">
-                <x-responsive-nav-link :href="route('profile.edit')">
-                    {{ __('Profile') }}
-                </x-responsive-nav-link>
-
-                <!-- Authentication -->
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-
-                    <x-responsive-nav-link :href="route('logout')"
-                        onclick="event.preventDefault();this.closest('form').submit();">{{ __('Log Out') }}
-                    </x-responsive-nav-link>
-                </form>
-            </div>
+            {{-- Dropdown dari foto profile teman-teman --}}
         </div>
     </div>
 </nav>

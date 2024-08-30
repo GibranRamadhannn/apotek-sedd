@@ -59,9 +59,9 @@ Route::middleware('auth', 'verified')->group(function () {
 
     // Stock
     // Stock Routes
-    Route::get('/stock/all', [StockController::class, 'allProducts'])->name('stock.all');
-    Route::get('/stock/medicine', [StockController::class, 'medicine'])->name('stock.medicine');
-    Route::get('/stock/tools', [StockController::class, 'medicTools'])->name('stock.tools');
+    Route::get('/stock', [StockController::class, 'allProducts'])->name('stock.all');
+    // Route::get('/stock/medicine', [StockController::class, 'medicine'])->name('stock.medicine');
+    // Route::get('/stock/tools', [StockController::class, 'medicTools'])->name('stock.tools');
 
 
     // Master Data

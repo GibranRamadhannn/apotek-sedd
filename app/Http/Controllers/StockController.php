@@ -16,17 +16,17 @@ class StockController extends Controller
         return view('stock.stock', compact('produks'));
     }
 
-    public function medicine()
-    {
-        $produks = ProdukModel::where('tipe', 'medicine')->get();
-        return view('stock.stock', compact('produks'));
-    }
+    // public function medicine()
+    // {
+    //     $produks = ProdukModel::where('tipe', 'medicine')->get();
+    //     return view('stock.stock', compact('produks'));
+    // }
 
-    public function medicTools()
-    {
-        $produks = ProdukModel::where('tipe', 'Medic Tools');
-        return view('stock.stock', compact('produks'));
-    }
+    // public function medicTools()
+    // {
+    //     $produks = ProdukModel::where('tipe', 'Medic Tools');
+    //     return view('stock.stock', compact('produks'));
+    // }
 
     /**
      * Show the form for creating a new resource.
