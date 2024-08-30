@@ -35,14 +35,12 @@ export default {
                 "soft-red": "#fa5151",
                 // Green Group
                 "lime-green": "#76d51f",
-                "dark-lime-green": "#188F3D",
                 // Black Group
                 "raisin-black": "#242124",
             },
             fontFamily: {
                 montserrat: ["Montserrat"],
                 poppins: ["Poppins"],
-                "playfair-display": ["Playfair-Display"],
             },
             borderRadius: {
                 "4xl": "32px",

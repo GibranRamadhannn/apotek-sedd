@@ -3,7 +3,7 @@
         <div class="flex items-center justify-between">
             <div class="flex items-center justify-center gap-8">
 
-                {{-- Responsive - Membuka Sidebar Ges --}}
+                {{-- Responsive - Sidebar Button Start --}}
                 <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar"
                     type="button"
                     class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
@@ -15,17 +15,17 @@
                         </path>
                     </svg>
                 </button>
-                {{-- Responsive - Membuka Sidebar Ges --}}
+                {{-- Responsive - Sidebar Button End --}}
 
-                {{-- Logo Aplikasi Bro --}}
+                {{-- Application Logo Start --}}
                 <div class="p-4 bg-white rounded-full">
                     <a href="/">
                         <x-application-logo class="block h-10 w-auto fill-current text-gray-800" />
                     </a>
                 </div>
-                {{-- Logo Aplikasi Bro --}}
+                {{-- Application Logo End --}}
 
-                {{-- Breadcrumbs cuy --}}
+                {{-- Breadcrumbs Start --}}
                 <div class="flex justify-center items-center gap-3">
                     {{-- Header label --}}
                     <div class="w-full">
@@ -39,10 +39,10 @@
                         @endisset
                     </div>
                 </div>
-                {{-- Breadcrumbs cuy --}}
+                {{-- Breadcrumbs End --}}
             </div>
 
-            {{-- Dropdown dari foto profile teman-teman --}}
+            {{-- Photo Profile Dropdown Start --}}
             <div class="flex items-center">
                 <div class="flex items-center ms-3">
                     <div>
@@ -77,7 +77,7 @@
                     </div>
                 </div>
             </div>
-            {{-- Dropdown dari foto profile teman-teman --}}
+            {{-- Photo Profile Dropdown End --}}
         </div>
     </div>
 </nav>

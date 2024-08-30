@@ -7,11 +7,13 @@
 
   @section('title','Produk')
 
-  <div class="p-1 mt-4">
-    <div class="max-w-screen mx-auto bg-light-gray rounded-3xl">
+  <div class="p-1">
+    <div class="max-w-screen mx-auto">
       <div class="overflow-hidden rounded-xl">
-        <div class="p-6">
-          <div class="inline-flex items-center gap-4 w-full">
+        {{-- Code Start --}}
+        <div class="p-4">
+          {{-- Top Section Start --}}
+          <div class="inline-flex items-center gap-4 w-full bg-light-gray shadow-md border rounded-4xl p-3">
             {{-- Title --}}
             <h3 class="font-medium text-black text-lg">Data Product</h3>
             {{-- Search --}}
@@ -30,11 +32,13 @@
               </div>
             </div>
           </div>
+          {{-- Top Section End --}}
           {{-- Tabel --}}
           <div class="p-3">
             @include('dashboard.produk.partial.product-table')
           </div>
         </div>
+        {{-- Code End --}}
       </div>
     </div>
   </div>

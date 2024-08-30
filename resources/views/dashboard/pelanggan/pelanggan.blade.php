@@ -7,11 +7,13 @@
 
   @section('title','Pelanggan')
 
-  <div class="p-1 mt-4">
-    <div class="max-w-screen mx-auto bg-light-gray rounded-3xl">
+  <div class="p-1">
+    <div class="max-w-screen min-h-screen mx-auto">
       <div class="overflow-hidden rounded-xl">
-        <div class="p-6">
-          <div class="inline-flex items-center gap-4 w-full">
+        {{-- Code Start --}}
+        <div class="p-4">
+          {{-- Top Section Start --}}
+          <div class="inline-flex items-center gap-4 w-full bg-light-gray shadow-md border rounded-4xl p-3">
             {{-- Title --}}
             <h3 class="font-medium text-black text-lg">Data Pelanggan</h3>
             {{-- Search --}}
@@ -23,14 +25,13 @@
             {{-- Buttons --}}
             <div class="p-3">
               <div class="flex flex-col justify-start items-start gap-4">
-                {{-- Button Group --}}
                 <div class="flex items-center gap-2">
                   {{-- Tambah Data --}}
-                  <x-third-button x-data="{ open: false }"
-                    x-on:click.prevent="$dispatch('open-modal', 'tambah-pelanggan')" class="items-center justify-center"
+                  <button x-data="{ open: false }" x-on:click.prevent="$dispatch('open-modal', 'tambah-pelanggan')"
+                    class="justify-center inline-flex items-center px-3 py-2 border bg-dark-lime-green border-transparent rounded-lg font-medium text-xs text-white hover:bg-lime-green transition ease-in-out duration-150"
                     focusable>{{
                     __('Tambah Pelanggan') }}
-                  </x-third-button>
+                  </button>
                   {{-- Modal --}}
                   <x-modal name="tambah-pelanggan">
                     <div class="flex justify-center items-center">
@@ -90,6 +91,7 @@
               </div>
             </div>
           </div>
+          {{-- Top Section Start --}}
           {{-- Tabel --}}
           <div class="p-3">
             <table class="w-full capitalize table-fixed">

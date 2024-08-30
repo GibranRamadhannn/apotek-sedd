@@ -162,8 +162,7 @@
     {{-- Showing Data - Dashboard Start --}}
     <div class="mt-4">
         {{-- Content Start --}}
-        <div
-            class="max-w-screen min-h-screen mx-auto bg-very-light-gray border-2 rounded-l-6xl border-light-gray shadow-lg">
+        <div class="max-w-screen min-h-screen mx-auto bg-very-light-gray border-2 rounded-l-6xl border-light-gray">
             <div class="overflow-hidden rounded-xl">
                 <div class="grid grid-cols-3 gap-1 p-1">
                     {{-- Left Section Start --}}
@@ -339,13 +338,12 @@
 
                     {{-- Right Section Start--}}
                     <div class="p-3 rounded-xl">
-                        {{-- Total Pelanggan --}}
+                        {{-- Recent Activity Start --}}
                         <div class="bg-white rounded-xl border-light-gray shadow-md p-4">
                             <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
                                 <div class="mx-auto max-w-3xl space-y-6 sm:space-y-8">
                                     {{-- Data Start --}}
-                                    <div
-                                        class="flex items-center justify-center bg-light-grayish-blue p-2 w-full rounded-xl">
+                                    <div class="flex items-center justify-center bg-light-gray p-2 w-full rounded-xl">
                                         <label for="recentActivity" class="text-raisin-black font-semibold text-xl">Your
                                             Recent Activity
                                         </label>
@@ -448,6 +446,7 @@
                                 </div>
                             </div>
                         </div>
+                        {{-- Recent Activity End --}}
                     </div>
                     {{-- Right Section End--}}
                 </div>

@@ -59,7 +59,7 @@
             </x-nav-link>
           </button>
           <span
-            class="absolute top-1 left-[110%] -translate-x-[0%] z-20 origin-left scale-0 px-3 rounded-lg bg-white border border-light-gray py-2 text-sm font-bold shadow-md transition-all duration-300 ease-in-out group-hover:scale-100 w-29">Point
+            class="absolute top-1 left-[110%] -translate-x-[0%] z-20 origin-left scale-0 px-3 rounded-lg bg-white border border-light-gray py-2 text-sm font-bold shadow-md transition-all duration-300 ease-in-out group-hover:scale-100 w-32">Point
             Of Sale
           </span>
         </div>

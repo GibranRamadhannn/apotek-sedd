@@ -1,9 +1,10 @@
 {{-- Tambah Data --}}
-<x-third-button x-data="{ open: false }" x-on:click.prevent="$dispatch('open-modal', 'tambah-produk')"
-  class="items-center justify-center" focusable>{{
+<button x-data="{ open: false }" x-on:click.prevent="$dispatch('open-modal', 'tambah-produk')"
+  class="justify-center inline-flex items-center px-3 py-2 border bg-dark-lime-green border-transparent rounded-lg font-medium text-xs text-white hover:bg-lime-green transition ease-in-out duration-150"
+  focusable>{{
   __('Tambah
   Produk') }}
-</x-third-button>
+</button>
 {{-- Modal - Tambah Data --}}
 <x-modal name="tambah-produk">
   <div class="flex justify-center items-center">
