@@ -7,47 +7,40 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## ATTENTION!!
+This Web Based Application was made using :
+- <a href="https://laravel.com/">Laravel</a> version 11 & Using Breeze Library
+- <a href="https://alpinejs.dev/">Alpine JS</a> Latest Version 3.x.x
+- <a href="https://tailwindcss.com/">Tailwind CSS</a>
+- Java Script
+- <a href="https://flowbite.com/">Flowbite</a> Tailwind CSS Components
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## CONFIGURE
+<h3>ENV FILE</h3>
+- Go to ENV. Example File, Copy the entire code or duplicate the file and rename it to 'ENV.'
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<h3>Tailwind Config</h3>
+- Go to tailwind.config.example File, Copy the entire code
+- Go to terminal and run this code "npx tailwindcss init tailwind.config.js"
+- Paste copied code to the new file
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<h3>Dont Forget to Run the Package</h3>
+- Go to Terminal
+- Run 'npm run dev'
 
-## Learning Laravel
+<h3>Dont Forget to Install the tailwind</h3>
+- Go to Terminal
+- Run 'npm install -D tailwindcss postcss autoprefixer'
+- Wait untill finish
+- Run 'npx tailwindcss init -p'
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<h3>SQL Dump (If you want to see the query)</h3>
+- Go to DB Folder
+- Find db-apotek-sed.dump
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+## USER ACCOUNT
+<h3>Email</h3> : admin@apotek.com
+<h3>Password</h3> : password
 
 ## Contributing
 
