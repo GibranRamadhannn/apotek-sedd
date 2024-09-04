@@ -16,6 +16,7 @@ export default {
                 button: "#098ddb",
                 button2: "#0aa1fa",
                 bg: "#F0F6F6",
+                input: "#F7FBFC",
 
                 // Index - Hex Names Groups
                 // Exclusive Group
@@ -38,6 +39,8 @@ export default {
                 "dark-lime-green": "#188F3D",
                 // Black Group
                 "raisin-black": "#242124",
+                // Blue Group
+                "bright-blue": "#29aaf6",
             },
             fontFamily: {
                 montserrat: ["Montserrat"],

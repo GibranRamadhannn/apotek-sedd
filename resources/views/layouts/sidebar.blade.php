@@ -1,13 +1,14 @@
+{{-- Sidebar Component begin:: --}}
 <aside id="logo-sidebar"
   class="sticky top-0 left-0 h-screen pt-20 transition-transform -translate-x-full sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
   aria-label="Sidebar">
-  <div class="h-full px-3 py-8 dark:bg-gray-800">
-
-    {{-- Menu Sidebar disini bro! --}}
+  {{-- Sidebar content begin:: --}}
+  <div class="h-full px-2 py-8 dark:bg-gray-800">
+    {{-- Sidebar Content - Navlink begin:: --}}
     <ul class="space-y-4 font-medium flex flex-col justify-center">
-
-      {{-- Dashboard --}}
+      {{-- Sidebar Content - Navlink - Dashboard begin:: --}}
       <li>
+        {{-- Sidebar Content - Navlink - Dashboard - Component - Button Trigger List menu begin:: --}}
         <div class="group relative w-fit">
           <button aria-controls="dropdown-dashboard" data-collapse-toggle="dropdown-dashboard">
             <x-nav-link :active="request()->routeIs('dashboard.*')">
@@ -22,31 +23,34 @@
               </div>
             </x-nav-link>
           </button>
+
+          {{-- Sidebar Content - Navlink - Dashboard - Component - Button Hover:Label ::end --}}
           <span
             class="absolute top-1 left-[110%] -translate-x-[0%] z-60 origin-left scale-0 px-3 rounded-lg bg-white border border-light-gray py-2 text-sm font-bold shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">Dashboard
           </span>
+          {{-- Sidebar Content - Navlink - Dashboard - Component - Button Hover:Label ::end --}}
         </div>
-        {{-- Dashboard Dropdown items nih bro! --}}
-        <ul id="dropdown-dashboard" class="hidden py-2 space-y-2">
-          <li>
-            <a href="{{ route('dashboard.pelanggan.index') }}"
-              class="flex items-center w-full p-2 text-grayish-cyan transition duration-75 pl-8 group hover:text-button2 dark:text-white dark:hover:bg-gray-700">Customer
-            </a>
-          </li>
-          <li>
-            <a href="{{ route('dashboard.produk.index') }}"
-              class="flex items-center w-full p-2 text-grayish-cyan transition duration-75 pl-8 group hover:text-button2 dark:text-white dark:hover:bg-gray-700">Product</a>
-          </li>
-          <li>
-            <a href="{{ route('dashboard.produk.index') }}"
-              class="flex items-center w-full p-2 text-grayish-cyan transition duration-75 pl-8 group hover:text-button2 dark:text-white dark:hover:bg-gray-700">Purchase</a>
-          </li>
+        {{-- Sidebar Content - Navlink - Dashboard - Component - Button Trigger List menu ::end --}}
+        {{-- Sidebar Content - Navlink - Dashboard - Component - List menu begin:: --}}
+        <ul id="dropdown-dashboard" class="hidden p-2 space-y-2 mt-2 bg-white rounded-xl w-full">
+          {{-- List menu - Route Customer begin:: --}}
+          <x-list-menu href="{{ route('dashboard.pelanggan.index') }}">Customer</x-list-menu>
+          {{-- List menu - Route Customer ::end --}}
+          {{-- List menu - Route Product begin:: --}}
+          <x-list-menu href="{{ route('dashboard.produk.index') }}">Product</x-list-menu>
+          {{-- List menu - Route Product ::end --}}
+          {{-- List menu - Route Purchase begin:: --}}
+          <x-list-menu href="{{ route('dashboard.produk.index') }}">Purchase</x-list-menu>
+          {{-- ist menu - Route Purchase ::end --}}
         </ul>
+        {{-- Sidebar Content - Navlink - Dashboard - Component - List menu ::end --}}
       </li>
+      {{-- Sidebar Content - Navlink - Dashboard ::end --}}
 
-      {{-- POS --}}
+      {{-- Sidebar Content - Navlink - POS begin:: --}}
       <li>
         <div class="group relative w-fit">
+          {{-- Sidebar Content - Navlink - Dashboard - Component - Button Route begin:: --}}
           <button>
             <x-nav-link href="{{ route('pos.index') }}" :active="request()->routeIs('pos.*')">
               <div class="p-1">
@@ -58,14 +62,18 @@
               </div>
             </x-nav-link>
           </button>
+          {{-- Sidebar Content - Navlink - Dashboard - Component - Button Route ::end --}}
+          {{-- Sidebar Content - Navlink - Dashboard - Component - Button Hover:Label begin:: --}}
           <span
             class="absolute top-1 left-[110%] -translate-x-[0%] z-20 origin-left scale-0 px-3 rounded-lg bg-white border border-light-gray py-2 text-sm font-bold shadow-md transition-all duration-300 ease-in-out group-hover:scale-100 w-32">Point
             Of Sale
           </span>
+          {{-- Sidebar Content - Navlink - Dashboard - Component - Button Hover:Label begin:: --}}
         </div>
       </li>
+      {{-- Sidebar Content - Navlink - POS ::end --}}
 
-      {{-- Order List --}}
+      {{-- Sidebar Content - Navlink - List Order begin:: --}}
       <li>
         <div class="group relative w-fit">
           <button>
@@ -84,8 +92,9 @@
           </span>
         </div>
       </li>
+      {{-- Sidebar Content - Navlink - List Order ::end --}}
 
-      {{-- Stock --}}
+      {{-- Sidebar Content - Navlink - Stock begin:: --}}
       <li>
         <div class="group relative w-fit">
           <button>
@@ -107,8 +116,9 @@
           </span>
         </div>
       </li>
+      {{-- Sidebar Content - Navlink - Stock ::end --}}
 
-      {{-- Master --}}
+      {{-- Sidebar Content - Navlink - Master begin:: --}}
       <li>
         <div class="group relative w-fit">
           <button aria-controls="dropdown-master" data-collapse-toggle="dropdown-master">
@@ -139,23 +149,26 @@
         <ul id="dropdown-master" class="hidden py-2 space-y-2">
           <li>
             <a href="{{ route('master.tipe') }}"
-              class="flex items-center w-full p-2 text-grayish-cyan transition duration-75 pl-8 group hover:text-button2 dark:text-white dark:hover:bg-gray-700">Product
+              class="flex items-center w-full p-2 text-grayish-cyan transition duration-75 group hover:text-button2 dark:text-white dark:hover:bg-gray-700">Product
               Type
             </a>
           </li>
           <li>
             <a href="{{ route('dashboard.produk.index') }}"
-              class="flex items-center w-full p-2 text-grayish-cyan transition duration-75 pl-8 group hover:text-button2 dark:text-white dark:hover:bg-gray-700">Customer
+              class="flex items-center w-full p-2 text-grayish-cyan transition duration-75 group hover:text-button2 dark:text-white dark:hover:bg-gray-700">Customer
               Type</a>
           </li>
           <li>
             <a href="{{ route('dashboard.produk.index') }}"
-              class="flex items-center w-full p-2 text-grayish-cyan transition duration-75 pl-8 group hover:text-button2 dark:text-white dark:hover:bg-gray-700">User
+              class="flex items-center w-full p-2 text-grayish-cyan transition duration-75 group hover:text-button2 dark:text-white dark:hover:bg-gray-700">User
               Account</a>
           </li>
         </ul>
       </li>
+      {{-- Sidebar Content - Navlink - master ::end --}}
     </ul>
-    {{-- Menu Sidebar disini bro! --}}
+    {{-- Sidebar Content - Navlink ::end --}}
   </div>
+  {{-- Sidebar content ::end --}}
 </aside>
+{{-- Sidebar Component ::end --}}
