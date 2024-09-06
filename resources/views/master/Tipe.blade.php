@@ -14,7 +14,8 @@
                     <div class="flex flex-col justify-start items-start gap-4">
 
                         {{-- Label --}}
-                        <label for="tabelDataDashboard" class="text-2xl font-semibold text-black">Data Tipe Produk</label>
+                        <label for="tabelDataDashboard" class="text-2xl font-semibold text-black">Data Tipe
+                            Produk</label>
 
                         {{-- Tambah Data --}}
                         <div class="flex items-center gap-2">

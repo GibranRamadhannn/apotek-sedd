@@ -124,7 +124,7 @@
           <div class="mb-4">
             {{-- Modal Content - Body - Items Product Price - Label begin:: --}}
             <div class="flex items-center">
-              <x-input-label for="harga" value="{{ __('Product Price') }}" />
+              <x-input-label for="harga" value="{{ __('Product Price (/pcs)') }}" />
               @error('harga')
               <span class="ml-2 text-red-600 text-sm">{{ $message }}</span>
               @enderror

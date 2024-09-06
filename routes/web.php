@@ -1,10 +1,13 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Dashboard\ProdukController;
 use App\Http\Controllers\ListOrder;
 use App\Http\Controllers\Master\MasterDataTipe;
+use App\Http\Controllers\Master\MasterDataUser;
+use App\Http\Controllers\MasterDataRoleAccountController;
 use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\Pembelian;
 use App\Http\Controllers\PembelianController;
@@ -12,6 +15,7 @@ use App\Http\Controllers\PosController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StockController;
 use App\Http\Middleware\BreadcrumbMiddleware;
+use App\Models\Master\MasterDataRoleAccount;
 use App\Models\Pembelian as ModelsPembelian;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
@@ -68,8 +72,10 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::prefix('master')->name('master.')->group(function () {
         Route::get('/tipe', [MasterDataTipe::class, 'index'])->name('tipe');
         Route::post('/tipe/tambah-tipe', [MasterDataTipe::class, 'store'])->name('tipe.store');
-        Route::get('/user', [MasterDataTipe::class, 'index'])->name('user');
-        Route::post('/user/tambah-user', [MasterDataTipe::class, 'store'])->name('user.store');
+        Route::get('/user', [MasterDataUser::class, 'index'])->name('user.index');
+        Route::post('/user/tambah-user', [RegisteredUserController::class, 'store'])->name('user.store');
+        Route::get('/role', [MasterDataRoleAccountController::class, 'index'])->name('role.index');
+        Route::post('/role/tambah-role', [MasterDataRoleAccountController::class, 'store'])->name('role.store');
     });
 
     // BreadCrumb

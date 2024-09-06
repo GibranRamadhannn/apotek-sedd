@@ -1,21 +1,19 @@
 <?php
 
-namespace App\Http\Controllers\Master;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Models\MasterData;
-use App\Models\User;
+use App\Models\Master\MasterDataRoleAccount;
 use Illuminate\Http\Request;
 
-class MasterDataUser extends Controller
+class MasterDataRoleAccountController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $user = User::all();
-        return view('master.user', compact('user'));
+        $role = MasterDataRoleAccount::all();
+        return view('master.role', compact('role'));
     }
 
     /**
@@ -33,15 +31,15 @@ class MasterDataUser extends Controller
     {
         // Validasi input
         $validated = $request->validate([
-            'nama_tipe' => 'required|string|max:255',
+            'role_name' => 'required|string|max:255',
             'status' => 'required|string|max:255',
         ]);
 
         // Simpan data ke database
-        MasterData::create($validated);
+        MasterDataRoleAccount::create($validated);
 
         // Redirect kembali ke halaman index
-        return redirect()->route('master.user');
+        return redirect()->route('master.role.index');
     }
 
     /**

@@ -75,6 +75,7 @@
 
       {{-- Sidebar Content - Navlink - List Order begin:: --}}
       <li>
+        {{-- Sidebar Content - Navlink - Dashboard - Component - Button Route begin:: --}}
         <div class="group relative w-fit">
           <button>
             <x-nav-link href="{{ route('listorder.index') }}" :active="request()->routeIs('listorder.*')">
@@ -91,6 +92,7 @@
             List
           </span>
         </div>
+        {{-- Sidebar Content - Navlink - Dashboard - Component - Button Route ::end --}}
       </li>
       {{-- Sidebar Content - Navlink - List Order ::end --}}
 
@@ -145,25 +147,22 @@
             Data
           </span>
         </div>
-        {{-- Master Dropdown items nih bro! --}}
-        <ul id="dropdown-master" class="hidden py-2 space-y-2">
-          <li>
-            <a href="{{ route('master.tipe') }}"
-              class="flex items-center w-full p-2 text-grayish-cyan transition duration-75 group hover:text-button2 dark:text-white dark:hover:bg-gray-700">Product
-              Type
-            </a>
-          </li>
-          <li>
-            <a href="{{ route('dashboard.produk.index') }}"
-              class="flex items-center w-full p-2 text-grayish-cyan transition duration-75 group hover:text-button2 dark:text-white dark:hover:bg-gray-700">Customer
-              Type</a>
-          </li>
-          <li>
-            <a href="{{ route('dashboard.produk.index') }}"
-              class="flex items-center w-full p-2 text-grayish-cyan transition duration-75 group hover:text-button2 dark:text-white dark:hover:bg-gray-700">User
-              Account</a>
-          </li>
+        {{-- Sidebar Content - Navlink - Master - Component - List menu begin:: --}}
+        <ul id="dropdown-master" class="hidden p-2 space-y-2 mt-2 bg-white rounded-xl w-full">
+          {{-- List menu - Route Product Type begin:: --}}
+          <x-list-menu href="{{ route('master.tipe') }}">Product Type</x-list-menu>
+          {{-- List menu - Route Product Type ::end --}}
+          {{-- List menu - Route Cust Type begin:: --}}
+          <x-list-menu href="{{ route('dashboard.produk.index') }}">Customer Type</x-list-menu>
+          {{-- List menu - Route Cust Type ::end --}}
+          {{-- List menu - Route User Acc begin:: --}}
+          <x-list-menu href="{{ route('master.user.index') }}">User Account</x-list-menu>
+          {{-- ist menu - Route User Acc ::end --}}
+          {{-- List menu - Route Role Account begin:: --}}
+          <x-list-menu href="{{ route('master.role.index') }}">Role Account</x-list-menu>
+          {{-- ist menu - Route Role Account ::end --}}
         </ul>
+        {{-- Sidebar Content - Navlink - Dashboard - Component - List menu ::end --}}
       </li>
       {{-- Sidebar Content - Navlink - master ::end --}}
     </ul>

@@ -1,28 +1,34 @@
 <x-app-layout>
+    {{-- Header begin:: --}}
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Dashboard') }}
         </h2>
     </x-slot>
-
+    {{-- Header ::end --}}
+    {{-- Title Web Page begin:: --}}
     @section('title','Dashboard')
+    {{-- Title Web Page ::end --}}
 
-    {{-- Panel Status - Dashboard Start--}}
+    {{-- Panel Status begin::--}}
     <div class="p-1">
+        {{-- Layout begin:: --}}
         <div class="max-w-screen mx-auto">
             <div class="overflow-hidden rounded-xl">
+                {{-- Card Layout begin:: --}}
                 <div class="p-4 grid grid-cols-5 gap-2">
 
-                    {{-- Revenue Card Start--}}
+                    {{-- Revenue Card begin:: --}}
                     <div class="w-full rounded-2xl col-span-2 justify-center flex items-center p-3">
+                        {{-- Content begin:: --}}
                         <div class="w-full h-full flex flex-col justify-between">
                             <label for="revenue" class="font-semibold text-2xl text-raisin-black">Revenue
                             </label>
-                            {{-- Content Start --}}
+
                             <div class="flex-col justify-between items-start flex">
                                 <h1 class="font-bold text-4xl text-raisin-black">Rp 1.500.000
                                 </h1>
-                                {{-- Filter Range Date Start --}}
+                                {{-- Filter Range Date begin:: --}}
                                 <div class="flex items-center justify-start text-center gap-2">
                                     <p class="text-base font-semibold text-raisin-black font-poppins">
                                         Jun 1 -Aug 31, 2024
@@ -37,14 +43,14 @@
                                         </svg>
                                     </button>
                                 </div>
-                                {{-- Filter Range Date End --}}
+                                {{-- Filter Range Date ::end --}}
                             </div>
-                            {{-- Content Start --}}
                         </div>
+                        {{-- Content ::end --}}
                     </div>
-                    {{-- Revenue Card End--}}
+                    {{-- Revenue Card ::end--}}
 
-                    {{-- Customers Start--}}
+                    {{-- Customers begin:: --}}
                     <div class="w-full rounded-2xl bg-black justify-center flex items-center p-3">
                         <div class="w-full h-full flex flex-col justify-between">
                             <label for="customers" class="font-semibold text-xl text-white">Customers
@@ -73,19 +79,19 @@
                             {{-- Content Start --}}
                         </div>
                     </div>
-                    {{-- Customers End--}}
+                    {{-- Customers ::end--}}
 
-                    {{-- Total Products Start --}}
+                    {{-- Total Products begin:: --}}
                     <div
                         class="w-full bg-white border-2 border-button shadow-sm rounded-2xl justify-center flex items-center p-3">
-                        {{-- Content Start --}}
+                        {{-- Content begin:: --}}
                         <div class="w-full h-full flex flex-col justify-between">
                             <div class="flex justify-between items-center">
                                 {{-- Label --}}
                                 <label for="totalProducts" class="font-semibold text-xl text-dark-gray">Total Products
                                 </label>
                                 {{-- Button See More --}}
-                                <button>
+                                <a href="{{ route('dashboard.produk.index') }}" title="See More">
                                     <svg class="w-7 h-7 hover:scale-110" viewBox="0 0 32 32"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <g fill="none" fill-rule="evenodd">
@@ -95,7 +101,7 @@
                                                 fill="#0aa1fa" />
                                         </g>
                                     </svg>
-                                </button>
+                                </a>
                             </div>
                             {{-- Data Products --}}
                             <div class="flex-col justify-between items-start flex">
@@ -106,11 +112,11 @@
                             </div>
                             {{-- Data Products --}}
                         </div>
-                        {{-- Content End --}}
+                        {{-- Content ::end --}}
                     </div>
-                    {{-- Total Products Start --}}
+                    {{-- Total Products ::end --}}
 
-                    {{-- Total Return Start --}}
+                    {{-- Total Return begin:: --}}
                     <div
                         class="w-full bg-white border-2 border-soft-red shadow-sm rounded-2xl justify-center flex items-center p-3">
                         <div class="w-full h-full flex flex-col justify-between">
@@ -152,12 +158,14 @@
                             {{-- Content End --}}
                         </div>
                     </div>
-                    {{-- Total Return End --}}
+                    {{-- Total Return ::end --}}
                 </div>
+                {{-- Card Layout ::end --}}
             </div>
         </div>
+        {{-- Layout ::end --}}
     </div>
-    {{-- Panel Status - Dashboard End--}}
+    {{-- Panel Status ::end--}}
 
     {{-- Showing Data - Dashboard Start --}}
     <div class="mt-4">
