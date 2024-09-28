@@ -18,9 +18,9 @@
                 {{-- Responsive - Sidebar Button End --}}
 
                 {{-- Application Logo Start --}}
-                <div class="p-4 bg-white rounded-full">
+                <div>
                     <a href="/">
-                        <x-application-logo class="block h-10 w-auto fill-current text-gray-800" />
+                        <x-application-logo />
                     </a>
                 </div>
                 {{-- Application Logo End --}}

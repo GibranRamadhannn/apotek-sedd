@@ -57,7 +57,7 @@
                             </label>
                             {{-- Content Start --}}
                             <div class="flex-col justify-between items-start flex">
-                                <h1 class="font-bold text-3xl text-lime-green">1.200
+                                <h1 class="font-bold text-3xl text-[#2AC49E]">1.200
                                 </h1>
                                 {{-- Filter Range Date Start --}}
                                 <div class="flex items-center justify-start text-center gap-2">
@@ -65,7 +65,7 @@
                                         Jun 1 -Aug 31, 2024
                                     </p>
                                     <button>
-                                        <svg class="w-6 h-6 text-grayish-magenta hover:scale-110 hover:text-lime-green"
+                                        <svg class="w-6 h-6 text-grayish-magenta hover:scale-110 hover:text-[#2AC49E]"
                                             viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M16.7502 3.56V2C16.7502 1.59 16.4102 1.25 16.0002 1.25C15.5902 1.25 15.2502 1.59 15.2502 2V3.5H8.75023V2C8.75023 1.59 8.41023 1.25 8.00023 1.25C7.59023 1.25 7.25023 1.59 7.25023 2V3.56C4.55023 3.81 3.24023 5.42 3.04023 7.81C3.02023 8.1 3.26023 8.34 3.54023 8.34H20.4602C20.7502 8.34 20.9902 8.09 20.9602 7.81C20.7602 5.42 19.4502 3.81 16.7502 3.56Z" />
@@ -191,8 +191,8 @@
 
                         {{-- Table Start --}}
                         <div class="overflow-x-auto p-2 bg-white rounded-xl mt-2">
-                            <table class="w-full text-sm text-left text-grayish-cyan dark:text-gray-400">
-                                <thead class="text-xs text-very-dark-gray dark:bg-gray-700 dark:text-gray-400">
+                            <table class="w-full text-sm text-left text-grayish-cyan">
+                                <thead class="text-xs text-very-dark-gray">
                                     <tr>
                                         <th scope="col" class="px-4 py-3">Product name</th>
                                         <th scope="col" class="px-4 py-3">Category</th>
@@ -205,9 +205,8 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="border-b dark:border-gray-700">
-                                        <th scope="row"
-                                            class="px-4 py-3 font-medium text-dark-gray whitespace-nowrap dark:text-white">
+                                    <tr class="border-b">
+                                        <th scope="row" class="px-4 py-3 font-medium text-dark-gray whitespace-nowrap">
                                             Apple iMac 21&#34;</th>
                                         <td class="px-4 py-3">PC</td>
                                         <td class="px-4 py-3">Apple</td>
@@ -216,7 +215,7 @@
                                         <td class="px-4 py-3 flex items-center justify-end">
                                             <button id="apple-imac-21-dropdown-button"
                                                 data-dropdown-toggle="apple-imac-21-dropdown"
-                                                class="inline-flex items-center p-0.5 text-sm font-medium text-center text-dark-gray hover:text-raisin-black rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100"
+                                                class="inline-flex items-center p-0.5 text-sm font-medium text-center text-dark-gray hover:text-raisin-black rounded-lg focus:outline-none"
                                                 type="button">
                                                 <svg class="w-5 h-5" aria-hidden="true" fill="currentColor"
                                                     viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -225,28 +224,27 @@
                                                 </svg>
                                             </button>
                                             <div id="apple-imac-21-dropdown"
-                                                class="hidden z-10 w-44 bg-light-gray rounded-xl divide-y divide-gray-100 shadow-sm dark:bg-gray-700 dark:divide-gray-600">
-                                                <ul class="py-1 text-sm text-dark-gray dark:text-gray-200"
+                                                class="hidden z-10 w-44 bg-light-gray rounded-xl divide-y divide-gray-100 shadow-sm">
+                                                <ul class="py-1 text-sm text-dark-gray"
                                                     aria-labelledby="apple-imac-20-dropdown-button">
                                                     <li>
                                                         <a href="#"
-                                                            class="block py-2 px-4 hover:bg-grayish-blue dark:hover:bg-gray-600 dark:hover:text-white">Show</a>
+                                                            class="block py-2 px-4 hover:bg-grayish-blue">Show</a>
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            class="block py-2 px-4 hover:bg-grayish-blue dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                                                            class="block py-2 px-4 hover:bg-grayish-blue">Edit</a>
                                                     </li>
                                                 </ul>
                                                 <div class="py-1">
                                                     <a href="#"
-                                                        class="block py-2 px-4 text-sm text-soft-red hover:bg-grayish-blue dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                                                        class="block py-2 px-4 text-sm text-soft-red hover:bg-grayish-blue">Delete</a>
                                                 </div>
                                             </div>
                                         </td>
                                     </tr>
-                                    <tr class="border-b dark:border-gray-700">
-                                        <th scope="row"
-                                            class="px-4 py-3 font-medium text-dark-gray whitespace-nowrap dark:text-white">
+                                    <tr class="border-b">
+                                        <th scope="row" class="px-4 py-3 font-medium text-dark-gray whitespace-nowrap">
                                             Apple iMac 20&#34;</th>
                                         <td class="px-4 py-3">PC</td>
                                         <td class="px-4 py-3">Apple</td>
@@ -255,7 +253,7 @@
                                         <td class="px-4 py-3 flex items-center justify-end">
                                             <button id="apple-imac-20-dropdown-button"
                                                 data-dropdown-toggle="apple-imac-20-dropdown"
-                                                class="inline-flex items-center p-0.5 text-sm font-medium text-center text-dark-gray hover:text-raisin-black rounded-lg focus:outline-none dark:text-gray-400 dark:hover:text-gray-100"
+                                                class="inline-flex items-center p-0.5 text-sm font-medium text-center text-dark-gray hover:text-raisin-black rounded-lg focus:outline-none"
                                                 type="button">
                                                 <svg class="w-5 h-5" aria-hidden="true" fill="currentColor"
                                                     viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -264,21 +262,21 @@
                                                 </svg>
                                             </button>
                                             <div id="apple-imac-20-dropdown"
-                                                class="hidden z-10 w-44 bg-light-gray rounded-xl divide-y divide-gray-100 shadow-sm dark:bg-gray-700 dark:divide-gray-600">
-                                                <ul class="py-1 text-sm text-dark-gray dark:text-gray-200"
+                                                class="hidden z-10 w-44 bg-light-gray rounded-xl divide-y divide-gray-100 shadow-sm">
+                                                <ul class="py-1 text-sm text-dark-gray"
                                                     aria-labelledby="apple-imac-20-dropdown-button">
                                                     <li>
                                                         <a href="#"
-                                                            class="block py-2 px-4 hover:bg-grayish-blue dark:hover:bg-gray-600 dark:hover:text-white">Show</a>
+                                                            class="block py-2 px-4 hover:bg-grayish-blue">Show</a>
                                                     </li>
                                                     <li>
                                                         <a href="#"
-                                                            class="block py-2 px-4 hover:bg-grayish-blue dark:hover:bg-gray-600 dark:hover:text-white">Edit</a>
+                                                            class="block py-2 px-4 hover:bg-grayish-blue">Edit</a>
                                                     </li>
                                                 </ul>
                                                 <div class="py-1">
                                                     <a href="#"
-                                                        class="block py-2 px-4 text-sm text-soft-red hover:bg-grayish-blue dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Delete</a>
+                                                        class="block py-2 px-4 text-sm text-soft-red hover:bg-grayish-blue">Delete</a>
                                                 </div>
                                             </div>
                                         </td>
@@ -287,16 +285,16 @@
                             </table>
                             <nav class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-3 md:space-y-0 p-4"
                                 aria-label="Table navigation">
-                                <span class="text-sm font-normal text-gray-500 dark:text-gray-400">
+                                <span class="text-sm font-normal text-gray-500 ">
                                     Showing
-                                    <span class="font-semibold text-gray-900 dark:text-white">1-10</span>
+                                    <span class="font-semibold text-gray-900">1-10</span>
                                     of
-                                    <span class="font-semibold text-gray-900 dark:text-white">1000</span>
+                                    <span class="font-semibold text-gray-900">1000</span>
                                 </span>
                                 <ul class="inline-flex items-stretch -space-x-px">
                                     <li>
                                         <a href="#"
-                                            class="flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                            class="flex items-center justify-center h-full py-1.5 px-3 ml-0 text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700">
                                             <span class="sr-only">Previous</span>
                                             <svg class="w-5 h-5" aria-hidden="true" fill="currentColor"
                                                 viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -308,27 +306,27 @@
                                     </li>
                                     <li>
                                         <a href="#"
-                                            class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
+                                            class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">1</a>
                                     </li>
                                     <li>
                                         <a href="#"
-                                            class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+                                            class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">2</a>
                                     </li>
                                     <li>
                                         <a href="#" aria-current="page"
-                                            class="flex items-center justify-center text-sm z-10 py-2 px-3 leading-tight text-primary-600 bg-primary-50 border border-primary-300 hover:bg-primary-100 hover:text-primary-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
+                                            class="flex items-center justify-center text-sm z-10 py-2 px-3 leading-tight text-primary-600 bg-primary-50 border border-primary-300 hover:bg-primary-100 hover:text-primary-700">3</a>
                                     </li>
                                     <li>
                                         <a href="#"
-                                            class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">...</a>
+                                            class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">...</a>
                                     </li>
                                     <li>
                                         <a href="#"
-                                            class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">100</a>
+                                            class="flex items-center justify-center text-sm py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">100</a>
                                     </li>
                                     <li>
                                         <a href="#"
-                                            class="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
+                                            class="flex items-center justify-center h-full py-1.5 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700">
                                             <span class="sr-only">Next</span>
                                             <svg class="w-5 h-5" aria-hidden="true" fill="currentColor"
                                                 viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

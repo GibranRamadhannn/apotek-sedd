@@ -1,9 +1,9 @@
 {{-- Sidebar Component begin:: --}}
 <aside id="logo-sidebar"
-  class="sticky top-0 left-0 h-screen pt-20 transition-transform -translate-x-full sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+  class="sticky top-0 left-0 h-screen pt-20 transition-transform -translate-x-full sm:translate-x-0"
   aria-label="Sidebar">
   {{-- Sidebar content begin:: --}}
-  <div class="h-full px-2 py-8 dark:bg-gray-800">
+  <div class="h-full px-2 py-8">
     {{-- Sidebar Content - Navlink begin:: --}}
     <ul class="space-y-4 font-medium flex flex-col justify-center">
       {{-- Sidebar Content - Navlink - Dashboard begin:: --}}

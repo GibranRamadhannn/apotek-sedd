@@ -33,9 +33,9 @@
                 <div class="justify-center items-center flex flex-col p-2 border-b-2 border-light-grayish-blue w-2/3">
                     <div class="w-full">
                         {{-- Logo --}}
-                        <div class="flex justify-start items-center">
-                            <x-application-logo />
-                            <h1 class="font-semibold text-2xl text-black">Apotek by SEDD</h1>
+                        <div class="flex justify-center items-center">
+                            <x-login-logo />
+                            {{-- <h1 class="font-semibold text-2xl text-black">Apotek by SEDD</h1> --}}
                         </div>
                         {{-- Label --}}
                         <h1 class="font-bold text-2xl text-raisin-black">@yield('label')</h1>
